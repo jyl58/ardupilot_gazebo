@@ -39,6 +39,8 @@ set (plugins_single_header
         ArduPilotPlugin
         ArduCopterIRLockPlugin
         GimbalSmall2dPlugin
+		ArduPilotPlugin_Rover
+		WorldCamerControlPlugin
         )
 
 add_library(ArduCopterIRLockPlugin SHARED src/ArduCopterIRLockPlugin.cc)
@@ -46,6 +48,13 @@ target_link_libraries(ArduCopterIRLockPlugin ${GAZEBO_LIBRARIES})
 
 add_library(ArduPilotPlugin SHARED src/ArduPilotPlugin.cc)
 target_link_libraries(ArduPilotPlugin ${GAZEBO_LIBRARIES})
+
+add_library(ArduPilotPlugin_Rover SHARED src/ArduPilotPlugin_Rover.cc)
+target_link_libraries(ArduPilotPlugin_Rover ${GAZEBO_LIBRARIES})
+
+add_library(WorldCamerControlPlugin SHARED src/world_camera_plugin/system_gui.cc)
+target_link_libraries(WorldCamerControlPlugin ${GAZEBO_LIBRARIES})
+
 
 if("${GAZEBO_VERSION}" VERSION_LESS "8.0")
     add_library(GimbalSmall2dPlugin SHARED src/GimbalSmall2dPlugin.cc)
@@ -56,5 +65,6 @@ endif()
 install(TARGETS ArduCopterIRLockPlugin DESTINATION ${GAZEBO_PLUGIN_PATH})
 install(TARGETS ArduPilotPlugin DESTINATION ${GAZEBO_PLUGIN_PATH})
 
-#install(DIRECTORY models DESTINATION ${GAZEBO_RESOURCE_PATH})
-#install(DIRECTORY worlds DESTINATION ${GAZEBO_RESOURCE_PATH})
+install(TARGETS ArduPilotPlugin_Rover DESTINATION ${GAZEBO_PLUGIN_PATH})
+
+install (TARGETS WorldCamerControlPlugin DESTINATION ${GAZEBO_PLUGIN_PATH})
