@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<sdf version="1.6" >
+  <model name="vehicle-3">
+    <include>
+      <uri>model://formation/vehicle3/iris_3</uri>
+    </include>
+  </model>
+</sdf>

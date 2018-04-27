@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<model name='maze'>
+		<pose>0 0 0 0 0 0</pose>
+		<link name='maze_link'>
+			
+			<collision name="collision_maze">
+				<geometry>
+					<mesh>
+					<uri>model://luo-xuan/tt.dae</uri>
+					</mesh>
+				</geometry>
+				<surface>
+					<bounce>
+						<restitution_coefficient>0.5</restitution_coefficient>
+					</bounce>
+				</surface>			
+			</collision>
+			<visual name='maze_visual'>
+				<cast_shadows>false</cast_shadows>
+				<geometry>
+					<mesh>
+					<uri>model://luo-xuan/tt.dae</uri>
+					</mesh>
+				</geometry>
+				<material>
+				<lighting>1</lighting>
+          			<script>
+						<uri>file://media/beijing.material</uri>
+              			<name>Gazebo/luoxuan</name>
+          			</script>
+        		</material>
+			</visual>
+		</link>
+	</model>
+</sdf>

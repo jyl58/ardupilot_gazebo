@@ -44,12 +44,14 @@
       <visual name='base_link_visual'>
         <geometry>
           <mesh>
-            <uri>model://iris_with_standoffs/meshes/iris.dae</uri>
+            <uri>model://iris_with_standoffs/meshes/iris.dae</uri>	
           </mesh>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+			<uri>file://media/beijing.material</uri>
+             <name>Gazebo/zhanjian</name>
+            <!--<name>Gazebo/White</name>-->
           </script>
         </material>
       </visual>
@@ -269,7 +271,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Blue</name>
+            <name>Gazebo/Green</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -339,7 +341,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Grey</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -409,7 +411,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Blue</name>
+            <name>Gazebo/Green</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -479,7 +481,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/DarkGrey</name>
+            <name>Gazebo/Grey</name>
             <uri>__default__</uri>
           </script>
         </material>

@@ -35,7 +35,7 @@
     <light id="Lamp-light" name="Lamp">
       <technique_common>
         <point>
-          <color sid="color">1 1 1</color>
+          <color sid="color">0 1 1</color>
           <constant_attenuation>1</constant_attenuation>
           <linear_attenuation>0</linear_attenuation>
           <quadratic_attenuation>0.00111109</quadratic_attenuation>
